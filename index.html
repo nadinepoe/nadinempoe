@@ -2486,6 +2486,87 @@
       border-bottom: 1px solid currentColor;
     }
 
+    /* --------------------------------------------------
+       BUSINESS OR SCAM - GALLERY VIEW
+       Scoped only to #business-panel. No content/SEO changes.
+    -------------------------------------------------- */
+    #business-panel .business-carousel {
+      min-height: 0;
+      overflow: visible;
+      perspective: none;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    #business-panel .business-carousel .relationship-carousel-stage {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      width: 100%;
+      min-height: 0;
+      transform: none;
+      transform-style: flat;
+    }
+
+    #business-panel .business-carousel .image-card,
+    #business-panel .business-carousel .image-card.carousel-active,
+    #business-panel .business-carousel .image-card.carousel-prev,
+    #business-panel .business-carousel .image-card.carousel-next,
+    #business-panel .business-carousel .image-card.carousel-far-prev,
+    #business-panel .business-carousel .image-card.carousel-far-next {
+      position: relative;
+      top: auto;
+      left: auto;
+      z-index: auto;
+      width: 100%;
+      height: auto;
+      min-width: 0;
+      margin: 0;
+      opacity: 1;
+      pointer-events: auto;
+      filter: none;
+      transform: none;
+      transform-origin: center;
+      box-shadow: none;
+    }
+
+    #business-panel .business-carousel .image-frame {
+      flex: none;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      min-height: 0;
+    }
+
+    #business-panel .business-carousel .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #business-panel .business-carousel .image-details {
+      min-height: 0;
+    }
+
+    #business-panel .business-carousel .relationship-carousel-control,
+    #business-panel .business-carousel .relationship-carousel-counter {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      #business-panel .business-carousel .relationship-carousel-stage {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      #business-panel .business-carousel .relationship-carousel-stage {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 
 </head>
