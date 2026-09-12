@@ -2568,6 +2568,36 @@
       }
     }
 
+
+    /* --------------------------------------------------
+       MY VIDEO - RESPONSIVE GITHUB-HOSTED VIDEO
+    -------------------------------------------------- */
+    #video-panel .my-video-wrap {
+      width: min(100%, 1100px);
+      margin: 0 auto;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.34);
+      border: 1px solid var(--border-pink);
+      border-radius: var(--radius-medium);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.42);
+    }
+
+    #video-panel .my-video-wrap video {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 76vh;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: #000000;
+    }
+
+    @media (max-width: 720px) {
+      #video-panel .my-video-wrap video {
+        max-height: 70vh;
+      }
+    }
+
   </style>
 
 </head>
@@ -2670,6 +2700,19 @@
           tabindex="-1"
         >
           Good Christian
+        </button>
+
+        <button
+          class="tab-button"
+          id="video-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="video-panel"
+          data-tab-target="video-panel"
+          tabindex="-1"
+        >
+          My Video
         </button>
       </div>
       </div>
@@ -4152,6 +4195,26 @@
 
           <button class="relationship-carousel-control relationship-carousel-next" type="button" aria-label="Show next Good Christian image">&#10095;</button>
           <div class="relationship-carousel-counter" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <!-- MY VIDEO TAB -->
+      <div
+        class="tab-panel"
+        id="video-panel"
+        role="tabpanel"
+        aria-labelledby="video-tab"
+        tabindex="0"
+        hidden
+      >
+        <h2 class="section-heading">My Video</h2>
+
+        <div class="my-video-wrap">
+          <!-- Upload your video to the Videos folder on GitHub using the filename my-video.mp4. -->
+          <video controls playsinline preload="metadata">
+            <source src="Videos/my-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </section>
